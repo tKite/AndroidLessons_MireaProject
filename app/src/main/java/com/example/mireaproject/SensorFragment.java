@@ -64,6 +64,9 @@ public class SensorFragment extends Fragment implements SensorEventListener {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentSensorBinding.inflate(getLayoutInflater());
         sensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
+        if (sensorManager != null) {
+            accelerometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        }
         if (accelerometerSensor == null) {
             Toast.makeText(getActivity(), "Устройство не найдено", Toast.LENGTH_SHORT).show();
         }
@@ -73,7 +76,6 @@ public class SensorFragment extends Fragment implements SensorEventListener {
     @Override
     public void onResume() {
         super.onResume();
-        accelerometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         sensorManager.registerListener(this, accelerometerSensor, SensorManager.SENSOR_DELAY_NORMAL);
     }
     @Override

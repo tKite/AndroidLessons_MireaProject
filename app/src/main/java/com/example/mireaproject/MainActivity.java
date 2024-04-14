@@ -1,5 +1,5 @@
 package com.example.mireaproject;
-
+//инициалы добавить забыла(
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;

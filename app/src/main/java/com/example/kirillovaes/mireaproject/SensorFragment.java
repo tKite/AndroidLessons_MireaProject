@@ -1,4 +1,4 @@
-package com.example.mireaproject;
+package com.example.kirillovaes.mireaproject;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -15,8 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.kirillovaes.mireaproject.databinding.FragmentSensorBinding;
 
-import com.example.mireaproject.databinding.FragmentSensorBinding;
 
 public class SensorFragment extends Fragment implements SensorEventListener {
 

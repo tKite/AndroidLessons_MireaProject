@@ -1,4 +1,4 @@
-package com.example.mireaproject.ui;
+package com.example.kirillovaes.mireaproject.ui;
 
 import android.content.Context;
 import android.util.Log;

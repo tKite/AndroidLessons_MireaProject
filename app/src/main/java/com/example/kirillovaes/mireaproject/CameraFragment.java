@@ -1,4 +1,4 @@
-package com.example.mireaproject;
+package com.example.kirillovaes.mireaproject;
 
 import android.Manifest;
 import android.content.Intent;
@@ -21,7 +21,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.mireaproject.databinding.FragmentCameraBinding;
+import com.example.kirillovaes.mireaproject.databinding.FragmentCameraBinding;
 
 
 public class CameraFragment extends Fragment{

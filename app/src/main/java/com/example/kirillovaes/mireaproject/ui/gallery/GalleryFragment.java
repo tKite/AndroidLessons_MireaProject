@@ -1,4 +1,4 @@
-package com.example.mireaproject.ui.gallery;
+package com.example.kirillovaes.mireaproject.ui.gallery;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.mireaproject.databinding.FragmentGalleryBinding;
+import com.example.kirillovaes.mireaproject.databinding.FragmentGalleryBinding;
+
 
 public class GalleryFragment extends Fragment {
 

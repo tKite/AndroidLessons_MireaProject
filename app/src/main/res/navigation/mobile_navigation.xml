@@ -7,49 +7,49 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.mireaproject.ui.home.HomeFragment"
+        android:name="com.example.kirillovaes.mireaproject.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.mireaproject.ui.gallery.GalleryFragment"
+        android:name="com.example.kirillovaes.mireaproject.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.mireaproject.ui.slideshow.SlideshowFragment"
+        android:name="com.example.kirillovaes.mireaproject.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/webViewFragment"
-        android:name="com.example.mireaproject.WebViewFragment"
+        android:name="com.example.kirillovaes.mireaproject.WebViewFragment"
         android:label="fragment_web_view"
         tools:layout="@layout/fragment_web_view" />
     <fragment
         android:id="@+id/dataFragment"
-        android:name="com.example.mireaproject.DataFragment"
+        android:name="com.example.kirillovaes.mireaproject.DataFragment"
         android:label="fragment_data"
         tools:layout="@layout/fragment_data" />
     <fragment
         android:id="@+id/workManagerFragment"
-        android:name="com.example.mireaproject.WorkManagerFragment"
+        android:name="com.example.kirillovaes.mireaproject.WorkManagerFragment"
         android:label="fragment_work_manager"
         tools:layout="@layout/fragment_work_manager" />
     <fragment
         android:id="@+id/MicroFragment"
-        android:name="com.example.mireaproject.MicroFragment"
+        android:name="com.example.kirillovaes.mireaproject.MicroFragment"
         android:label="fragment_micro"
         tools:layout="@layout/fragment_micro" />
     <fragment
         android:id="@+id/CameraFragment"
-        android:name="com.example.mireaproject.CameraFragment"
+        android:name="com.example.kirillovaes.mireaproject.CameraFragment"
         android:label="fragment_camera"
         tools:layout="@layout/fragment_camera" />
     <fragment
         android:id="@+id/SensorFragment"
-        android:name="com.example.mireaproject.SensorFragment"
+        android:name="com.example.kirillovaes.mireaproject.SensorFragment"
         android:label="fragment_sensor"
         tools:layout="@layout/fragment_sensor" />
 </navigation>

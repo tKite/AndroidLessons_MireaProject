@@ -1,4 +1,4 @@
-package com.example.mireaproject;
+package com.example.kirillovaes.mireaproject;
 
 import android.os.Bundle;
 
@@ -12,8 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.mireaproject.databinding.FragmentWorkManagerBinding;
-import com.example.mireaproject.ui.WorkerClass;
+import com.example.kirillovaes.mireaproject.databinding.FragmentWorkManagerBinding;
+import com.example.kirillovaes.mireaproject.ui.WorkerClass;
 
 /**
  * A simple {@link Fragment} subclass.

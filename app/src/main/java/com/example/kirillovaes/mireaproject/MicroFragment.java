@@ -1,4 +1,4 @@
-package com.example.mireaproject;
+package com.example.kirillovaes.mireaproject;
 
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
@@ -16,7 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.mireaproject.databinding.FragmentMicroBinding;
+import com.example.kirillovaes.mireaproject.databinding.FragmentMicroBinding;
+
 import java.io.File;
 import java.io.IOException;
 

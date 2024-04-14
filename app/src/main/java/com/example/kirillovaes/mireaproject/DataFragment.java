@@ -1,4 +1,4 @@
-package com.example.mireaproject;
+package com.example.kirillovaes.mireaproject;
 
 import android.os.Bundle;
 

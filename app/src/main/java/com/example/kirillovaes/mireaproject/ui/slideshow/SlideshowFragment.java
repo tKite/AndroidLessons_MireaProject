@@ -1,4 +1,4 @@
-package com.example.mireaproject.ui.slideshow;
+package com.example.kirillovaes.mireaproject.ui.slideshow;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.mireaproject.databinding.FragmentSlideshowBinding;
+import com.example.kirillovaes.mireaproject.databinding.FragmentSlideshowBinding;
+
 
 public class SlideshowFragment extends Fragment {
 

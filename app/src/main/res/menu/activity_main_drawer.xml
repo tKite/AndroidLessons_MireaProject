@@ -22,5 +22,17 @@
         <item
             android:id="@+id/webViewFragment"
             android:title="Web Fragment" />
+        <item
+            android:id="@+id/workManagerFragment"
+            android:title="WorkManager Fragment" />
+        <item
+            android:id="@+id/MicroFragment"
+            android:title="Micro Fragment" />
+        <item
+            android:id="@+id/CameraFragment"
+            android:title="Camera Fragment" />
+        <item
+            android:id="@+id/SensorFragment"
+            android:title="Sensor Fragment" />
     </group>
 </menu>

@@ -3,20 +3,25 @@ package com.example.mireaproject;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkManager;
+import androidx.work.WorkRequest;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.widget.Toast;
+
+import com.example.mireaproject.databinding.FragmentWorkManagerBinding;
+import com.example.mireaproject.ui.WorkerClass;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link WebViewFragment#newInstance} factory method to
+ * Use the {@link WorkManagerFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class WebViewFragment extends Fragment {
-
+public class WorkManagerFragment extends Fragment {
+    private FragmentWorkManagerBinding binding;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -26,7 +31,7 @@ public class WebViewFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public WebViewFragment() {
+    public WorkManagerFragment() {
         // Required empty public constructor
     }
 
@@ -36,14 +41,12 @@ public class WebViewFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment WebViewFragment.
+     * @return A new instance of fragment WorkManagerFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static WebViewFragment newInstance(String param1, String param2) {
-        WebViewFragment fragment = new WebViewFragment();
+    public static WorkManagerFragment newInstance(String param1, String param2) {
+        WorkManagerFragment fragment = new WorkManagerFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -56,15 +59,22 @@ public class WebViewFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-    private WebView webView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_web_view, container, false);
-
-        webView = rootView.findViewById(R.id.web_view);
-        webView.setWebViewClient(new WebViewClient());
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://www.youtube.com/");
-        return rootView;
+        binding = FragmentWorkManagerBinding.inflate(inflater, container, false);
+        binding.button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                WorkRequest uploadWorkRequest =
+                        new OneTimeWorkRequest.Builder(WorkerClass.class)
+                                .build();
+                WorkManager
+                        .getInstance(requireContext())
+                        .enqueue(uploadWorkRequest);
+                Toast.makeText(getActivity(), "Вы нажали на кнопку", Toast.LENGTH_SHORT).show();
+            }
+        });
+        return binding.getRoot();
     }
 }

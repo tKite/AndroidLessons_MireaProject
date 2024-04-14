@@ -16,10 +16,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mireaproject.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    static final private int REQUEST_CODE_PERMISSION = 200;
+    public SensorFragment distance_sensor;
+    public CameraFragment profile_photo;
+    public MicroFragment profile_voice;
+    boolean is_permissions_granted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +46,15 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.dataFragment, R.id.webViewFragment)
+                R.id.nav_home,
+                R.id.nav_gallery,
+                R.id.nav_slideshow,
+                R.id.dataFragment,
+                R.id.webViewFragment,
+                R.id.CameraFragment,
+                R.id.SensorFragment,
+                R.id.MicroFragment,
+                R.id.workManagerFragment)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);

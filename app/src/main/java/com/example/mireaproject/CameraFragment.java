@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.provider.MediaStore;
@@ -70,7 +71,14 @@ public class CameraFragment extends Fragment{
         takePhotoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MakePermissionsRequest();
+                if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CAMERA)
+                        == PackageManager.PERMISSION_GRANTED) {
+                    takePhotoButtonClicked();
+                } else {
+                    ActivityCompat.requestPermissions(getActivity(),
+                            new String[]{Manifest.permission.CAMERA},
+                            200);
+                }
             }
         });
         Descriprion_Button.setOnClickListener(new View.OnClickListener() {
@@ -80,21 +88,6 @@ public class CameraFragment extends Fragment{
             }
         });
         return binding.getRoot();
-    }
-    public void MakePermissionsRequest() {
-        int	cameraPermissionStatus = ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.CAMERA);
-        int	storagePermissionStatus	= ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if	(cameraPermissionStatus	==	PackageManager.PERMISSION_GRANTED	&&	storagePermissionStatus
-                ==	PackageManager.PERMISSION_GRANTED){
-            is_permissions_granted	=	true;
-            takePhotoButtonClicked();
-        }	else	{
-            //	Выполняется запрос к пользователь на получение необходимых разрешений
-            is_permissions_granted = false;
-            ActivityCompat.requestPermissions(getActivity(),	new	String[]	{
-                    android.Manifest.permission.CAMERA,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE},	200);
-        }
     }
 
     private void saveNote() {

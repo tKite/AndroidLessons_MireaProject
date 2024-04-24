@@ -34,5 +34,11 @@
         <item
             android:id="@+id/SensorFragment"
             android:title="Sensor Fragment" />
+        <item
+            android:id="@+id/ProfileFragment"
+            android:title="Profile Fragment" />
+        <item
+            android:id="@+id/WorkWithFileFragment"
+            android:title="WorkWithFile Fragment" />
     </group>
 </menu>

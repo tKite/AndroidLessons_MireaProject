@@ -53,7 +53,9 @@ public class MainActivity extends AppCompatActivity{
                 R.id.CameraFragment,
                 R.id.SensorFragment,
                 R.id.MicroFragment,
-                R.id.workManagerFragment)
+                R.id.workManagerFragment,
+                R.id.ProfileFragment,
+                R.id.WorkWithFileFragment)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);

@@ -52,4 +52,14 @@
         android:name="com.example.kirillovaes.mireaproject.SensorFragment"
         android:label="fragment_sensor"
         tools:layout="@layout/fragment_sensor" />
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.example.kirillovaes.mireaproject.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/WorkWithFileFragment"
+        android:name="com.example.kirillovaes.mireaproject.WorkWithFileFragment"
+        android:label="fragment_work_with_file"
+        tools:layout="@layout/fragment_work_with_file" />
 </navigation>

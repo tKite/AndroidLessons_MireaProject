@@ -30,6 +30,9 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.KeySpec;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -152,7 +155,8 @@ public class WorkWithFileFragment extends Fragment {
                 } else {
                     encryptedText.append((char) (c + shiftAmount));
                 }
-            } else {
+            }
+            else {
                 encryptedText.append(c);
             }
         }
@@ -170,7 +174,9 @@ public class WorkWithFileFragment extends Fragment {
                 } else {
                     decryptedText.append((char) (c - shiftAmount));
                 }
-            } else {
+
+            }
+            else{
                 decryptedText.append(c);
             }
         }

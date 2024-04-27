@@ -40,5 +40,8 @@
         <item
             android:id="@+id/WorkWithFileFragment"
             android:title="WorkWithFile Fragment" />
+        <item
+            android:id="@+id/NetworkDataFragment"
+            android:title="NetworkData Fragment" />
     </group>
 </menu>

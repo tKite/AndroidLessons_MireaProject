@@ -55,7 +55,8 @@ public class MainActivity extends AppCompatActivity{
                 R.id.MicroFragment,
                 R.id.workManagerFragment,
                 R.id.ProfileFragment,
-                R.id.WorkWithFileFragment)
+                R.id.WorkWithFileFragment,
+                R.id.NetworkDataFragment)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);

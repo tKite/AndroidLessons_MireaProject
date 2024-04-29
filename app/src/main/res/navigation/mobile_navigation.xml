@@ -67,4 +67,19 @@
         android:name="com.example.kirillovaes.mireaproject.NetworkDataFragment"
         android:label="fragment_network_data"
         tools:layout="@layout/fragment_network_data" />
+    <fragment
+        android:id="@+id/PlacesFragment"
+        android:name="com.example.kirillovaes.mireaproject.PlacesFragment"
+        android:label="fragment_places"
+        tools:layout="@layout/fragment_places">
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/MapFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MapFragment"
+        android:name="com.example.kirillovaes.mireaproject.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
 </navigation>
